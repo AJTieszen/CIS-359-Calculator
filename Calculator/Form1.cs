@@ -74,7 +74,24 @@ namespace Calculator
 
         private void Dot_Click(object sender, EventArgs e)
         {
-            string w = Output.Text;
+            string w = Output.Text.ToString();
+            int len = w.Length;
+            bool hasDecimal = false;
+
+            // Check if output already has a decimal
+            for (int i = 0; i < len; i ++)
+            {
+                if (w[i] == '.')
+                {
+                    hasDecimal = true;
+                }
+            }
+
+            // Add decimal if not already in string
+            if (!hasDecimal)
+            {
+                Output.Text += ".";
+            }
         }
     }
 }
