@@ -58,6 +58,7 @@
             this.Num7.TabIndex = 1;
             this.Num7.Text = "7";
             this.Num7.UseVisualStyleBackColor = true;
+            this.Num7.Click += new System.EventHandler(this.Num7_Click);
             // 
             // Num8
             // 
@@ -67,6 +68,7 @@
             this.Num8.TabIndex = 2;
             this.Num8.Text = "8";
             this.Num8.UseVisualStyleBackColor = true;
+            this.Num8.Click += new System.EventHandler(this.Num8_Click);
             // 
             // Num9
             // 
@@ -76,6 +78,7 @@
             this.Num9.TabIndex = 3;
             this.Num9.Text = "9";
             this.Num9.UseVisualStyleBackColor = true;
+            this.Num9.Click += new System.EventHandler(this.Num9_Click);
             // 
             // Div
             // 
@@ -121,6 +124,7 @@
             this.Num6.TabIndex = 6;
             this.Num6.Text = "6";
             this.Num6.UseVisualStyleBackColor = true;
+            this.Num6.Click += new System.EventHandler(this.Num6_Click);
             // 
             // Num5
             // 
@@ -130,6 +134,7 @@
             this.Num5.TabIndex = 5;
             this.Num5.Text = "5";
             this.Num5.UseVisualStyleBackColor = true;
+            this.Num5.Click += new System.EventHandler(this.Num5_Click);
             // 
             // Num4
             // 
@@ -139,6 +144,7 @@
             this.Num4.TabIndex = 4;
             this.Num4.Text = "4";
             this.Num4.UseVisualStyleBackColor = true;
+            this.Num4.Click += new System.EventHandler(this.Num4_Click);
             // 
             // Sqrt
             // 
@@ -166,6 +172,7 @@
             this.Num3.TabIndex = 9;
             this.Num3.Text = "3";
             this.Num3.UseVisualStyleBackColor = true;
+            this.Num3.Click += new System.EventHandler(this.Num3_Click);
             // 
             // Num2
             // 
@@ -175,6 +182,7 @@
             this.Num2.TabIndex = 8;
             this.Num2.Text = "2";
             this.Num2.UseVisualStyleBackColor = true;
+            this.Num2.Click += new System.EventHandler(this.Num2_Click);
             // 
             // Num1
             // 
@@ -184,6 +192,7 @@
             this.Num1.TabIndex = 7;
             this.Num1.Text = "1";
             this.Num1.UseVisualStyleBackColor = true;
+            this.Num1.Click += new System.EventHandler(this.Num1_Click);
             // 
             // Output
             // 
@@ -219,6 +228,7 @@
             this.Dot.TabIndex = 11;
             this.Dot.Text = ".";
             this.Dot.UseVisualStyleBackColor = true;
+            this.Dot.Click += new System.EventHandler(this.Dot_Click);
             // 
             // Num0
             // 
