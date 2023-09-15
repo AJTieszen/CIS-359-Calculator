@@ -90,7 +90,7 @@ namespace Calculator
             // Add decimal if not already in string
             if (!hasDecimal)
             {
-                Output.Text += ".";
+                Output.Text += "."; 
             }
         }
     }
