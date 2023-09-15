@@ -110,22 +110,34 @@ namespace Calculator
 
         private void Mult_Click(object sender, EventArgs e)
         {
-            Output.Text += "*";
+            if (CheckOperatorValid())
+            {
+                Output.Text += "*";
+            }
         }
 
         private void Div_Click(object sender, EventArgs e)
         {
-            Output.Text += "/";
+            if (CheckOperatorValid())
+            {
+                Output.Text += "/";
+            }
         }
 
         private void Plus_Click(object sender, EventArgs e)
         {
-            Output.Text += "+";
+            if (CheckOperatorValid())
+            {
+                Output.Text += "+";
+            }
         }
 
         private void Minus_Click(object sender, EventArgs e)
         {
-            Output.Text += "-";
+            if (CheckOperatorValid())
+            {
+                Output.Text += "-";
+            }
         }
 
         private void Sqrt_Click(object sender, EventArgs e)
@@ -151,7 +163,6 @@ namespace Calculator
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void Calc_Click(object sender, EventArgs e)
         {
             try
@@ -162,6 +173,26 @@ namespace Calculator
             } catch(Exception ex) {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private bool CheckOperatorValid()
+        {
+            // catch empty string
+            String w = Output.Text.ToString();
+            int len = w.Length;
+
+            if (len < 1)
+            {
+                return false;
+            }
+
+            // catch repeated operators
+            char c = w[len - 1];
+            if (c == '.' || c == '+' || c == '-' || c == '*' || c == '/')
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }
