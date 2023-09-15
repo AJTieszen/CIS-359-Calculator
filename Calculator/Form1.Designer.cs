@@ -158,6 +158,7 @@
             this.Sqrt.TabIndex = 18;
             this.Sqrt.Text = "√‾‾";
             this.Sqrt.UseVisualStyleBackColor = true;
+            this.Sqrt.Click += new System.EventHandler(this.Sqrt_Click);
             // 
             // Square
             // 
@@ -167,6 +168,7 @@
             this.Square.TabIndex = 17;
             this.Square.Text = "^2";
             this.Square.UseVisualStyleBackColor = true;
+            this.Square.Click += new System.EventHandler(this.Square_Click);
             // 
             // Num3
             // 
