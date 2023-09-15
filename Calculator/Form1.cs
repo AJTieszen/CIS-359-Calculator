@@ -77,14 +77,22 @@ namespace Calculator
         {
             string w = Output.Text.ToString();
             int len = w.Length;
+            int start = 0;
             bool hasDecimal = false;
 
             // Check if output already has a decimal
-            for (int i = 0; i < len; i ++)
+            for (int i = start; i < len; i ++)
             {
-                if (w[i] == '.')
+                char c = w[i];
+                if (c == '.')
                 {
                     hasDecimal = true;
+                }
+
+                // Clear flag if operator is reached
+                if (c == '+' || c == '-' || c == '*' || c == '/')
+                {
+                    hasDecimal = false;
                 }
             }
 
