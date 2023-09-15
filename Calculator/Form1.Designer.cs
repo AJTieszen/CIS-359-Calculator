@@ -220,6 +220,7 @@
             // 
             // Clear
             // 
+            this.Clear.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Clear.Location = new System.Drawing.Point(174, 283);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(75, 72);
@@ -250,8 +251,10 @@
             // 
             // Cal_Form
             // 
+            this.AcceptButton = this.Calc;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.Clear;
             this.ClientSize = new System.Drawing.Size(422, 364);
             this.Controls.Add(this.Calc);
             this.Controls.Add(this.Clear);
