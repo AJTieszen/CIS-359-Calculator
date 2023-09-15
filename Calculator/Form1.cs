@@ -21,5 +21,10 @@ namespace Calculator
         {
 
         }
+
+        private void Num0_Click(object sender, EventArgs e)
+        {
+            Output.Text += "0";
+        }
     }
 }
