@@ -169,7 +169,12 @@ namespace Calculator
             {
                 DataTable calc = new DataTable();
                 var ans = calc.Compute(Output.Text, "");
+
                 Output.Text = ans.ToString();
+                if (Output.Text == "42")
+                {
+                    Output.Text += ", The answer to life, the universe, and everything";
+                }
             } catch(Exception ex) {
                 MessageBox.Show(ex.Message);
             }
