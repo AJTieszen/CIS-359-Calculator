@@ -166,7 +166,6 @@ namespace Calculator
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void Calc_Click(object sender, EventArgs e)
         {
             try
