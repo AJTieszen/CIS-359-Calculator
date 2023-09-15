@@ -110,6 +110,16 @@ namespace Calculator
 
         private void Mult_Click(object sender, EventArgs e)
         {
+            // Prevent repeated operators
+            String w = Output.Text.ToString();
+            int len = w.Length;
+            char c = w[len];
+
+            if (c == '.' || c == '+' || c == '-' || c == '*' || c == '/')
+            {
+                return;
+            }
+
             Output.Text += "*";
         }
 
