@@ -93,5 +93,30 @@ namespace Calculator
                 Output.Text += "."; 
             }
         }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            Output.Text = string.Empty;
+        }
+
+        private void Mult_Click(object sender, EventArgs e)
+        {
+            Output.Text += "*";
+        }
+
+        private void Div_Click(object sender, EventArgs e)
+        {
+            Output.Text += "/";
+        }
+
+        private void Plus_Click(object sender, EventArgs e)
+        {
+            Output.Text += "+";
+        }
+
+        private void Minus_Click(object sender, EventArgs e)
+        {
+            Output.Text += "-";
+        }
     }
 }
