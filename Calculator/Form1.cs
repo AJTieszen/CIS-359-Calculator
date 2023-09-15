@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using static System.Math;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -76,14 +77,22 @@ namespace Calculator
         {
             string w = Output.Text.ToString();
             int len = w.Length;
+            int start = 0;
             bool hasDecimal = false;
 
             // Check if output already has a decimal
-            for (int i = 0; i < len; i ++)
+            for (int i = start; i < len; i ++)
             {
-                if (w[i] == '.')
+                char c = w[i];
+                if (c == '.')
                 {
                     hasDecimal = true;
+                }
+
+                // Clear flag if operator is reached
+                if (c == '+' || c == '-' || c == '*' || c == '/')
+                {
+                    hasDecimal = false;
                 }
             }
 
@@ -91,6 +100,67 @@ namespace Calculator
             if (!hasDecimal)
             {
                 Output.Text += "."; 
+            }
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            Output.Text = string.Empty;
+        }
+
+        private void Mult_Click(object sender, EventArgs e)
+        {
+            Output.Text += "*";
+        }
+
+        private void Div_Click(object sender, EventArgs e)
+        {
+            Output.Text += "/";
+        }
+
+        private void Plus_Click(object sender, EventArgs e)
+        {
+            Output.Text += "+";
+        }
+
+        private void Minus_Click(object sender, EventArgs e)
+        {
+            Output.Text += "-";
+        }
+
+        private void Sqrt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double ans = Sqrt(double.Parse(Output.Text));
+                Output.Text = ans.ToString();
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Square_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double ans = Pow(double.Parse(Output.Text), 2);
+                Output.Text = ans.ToString();
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Calc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable calc = new DataTable();
+                var ans = calc.Compute(Output.Text, "");
+                Output.Text = ans.ToString();
+            } catch(Exception ex) {
+                MessageBox.Show(ex.Message);
             }
         }
     }

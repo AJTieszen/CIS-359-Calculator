@@ -88,6 +88,7 @@
             this.Div.TabIndex = 14;
             this.Div.Text = "/";
             this.Div.UseVisualStyleBackColor = true;
+            this.Div.Click += new System.EventHandler(this.Div_Click);
             // 
             // Mult
             // 
@@ -97,6 +98,7 @@
             this.Mult.TabIndex = 13;
             this.Mult.Text = "*";
             this.Mult.UseVisualStyleBackColor = true;
+            this.Mult.Click += new System.EventHandler(this.Mult_Click);
             // 
             // Minus
             // 
@@ -106,6 +108,7 @@
             this.Minus.TabIndex = 16;
             this.Minus.Text = "-";
             this.Minus.UseVisualStyleBackColor = true;
+            this.Minus.Click += new System.EventHandler(this.Minus_Click);
             // 
             // Plus
             // 
@@ -115,6 +118,7 @@
             this.Plus.TabIndex = 15;
             this.Plus.Text = "+";
             this.Plus.UseVisualStyleBackColor = true;
+            this.Plus.Click += new System.EventHandler(this.Plus_Click);
             // 
             // Num6
             // 
@@ -154,6 +158,7 @@
             this.Sqrt.TabIndex = 18;
             this.Sqrt.Text = "√‾‾";
             this.Sqrt.UseVisualStyleBackColor = true;
+            this.Sqrt.Click += new System.EventHandler(this.Sqrt_Click);
             // 
             // Square
             // 
@@ -163,6 +168,7 @@
             this.Square.TabIndex = 17;
             this.Square.Text = "^2";
             this.Square.UseVisualStyleBackColor = true;
+            this.Square.Click += new System.EventHandler(this.Square_Click);
             // 
             // Num3
             // 
@@ -210,6 +216,7 @@
             this.Calc.TabIndex = 19;
             this.Calc.Text = "Calculate";
             this.Calc.UseVisualStyleBackColor = true;
+            this.Calc.Click += new System.EventHandler(this.Calc_Click);
             // 
             // Clear
             // 
@@ -219,6 +226,7 @@
             this.Clear.TabIndex = 20;
             this.Clear.Text = "C";
             this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // Dot
             // 
