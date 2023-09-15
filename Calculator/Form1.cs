@@ -151,5 +151,17 @@ namespace Calculator
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Calc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable calc = new DataTable();
+                var ans = calc.Compute(Output.Text, "");
+                Output.Text = ans.ToString();
+            } catch(Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

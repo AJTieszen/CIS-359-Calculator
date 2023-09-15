@@ -216,6 +216,7 @@
             this.Calc.TabIndex = 19;
             this.Calc.Text = "Calculate";
             this.Calc.UseVisualStyleBackColor = true;
+            this.Calc.Click += new System.EventHandler(this.Calc_Click);
             // 
             // Clear
             // 
